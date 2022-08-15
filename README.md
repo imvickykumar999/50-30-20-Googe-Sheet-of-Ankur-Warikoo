@@ -19,3 +19,9 @@
       sheet.getRange(sheet.getLastRow() + 1,1).setValue([fact]);
 
     }
+
+--------------------------------
+
+# Auto Function Trigger : [StackOverflow](https://stackoverflow.com/a/9129775/11493297)
+
+![image](https://user-images.githubusercontent.com/50515418/184603569-3159874f-3939-43a5-91bd-ae71f1fe9cfd.png)
