@@ -50,23 +50,23 @@ year = 2021
 head = ['Year', 'Starting Salary',
         'Increment', 'Ending Salary', 
         'Needs', 'Wants', 'Investments', 
-        'Needs %', 'Wants %', 'Investments %']
+        'Needs (x 100 %)', 'Wants (x 100 %)', 'Investments (x 100 %)']
 
 body = [year, 0 , 0, 
-        your_salary, '=D2*H2/12',
-        '=I2*D2/12', '=J2*D2/12',
-        '=50%', '=30%', '=20%']
+        your_salary, '=(D2*H2/12)',
+        '=(I2*D2/12)', '=(J2*D2/12)',
+        '=(50%)', '=(30%)', '=(20%)']
 
 
 obj.mark(sheet_id, 'A1', [head])
 obj.mark(sheet_id, 'A2', [body])
 
 for i in range(3, 12):
-    var = [f'=A{i-1}+1', f'=D{i-1}', f'=10%*B{i}',
-           f'=B{i}+C{i}', f'=E{i-1}+C{i}*$J${i-1}/12',
-           f'=F{i-1}+C{i}*$I${i-1}/12',
-           f'=G{i-1}+C{i}*$H${i-1}/12', f'=E{i}*12/$D{i}',
-           f'=F{i}*12/$D{i}', f'=G{i}*12/$D{i}']
+    var = [f'=(A{i-1}+1)', f'=(D{i-1})', f'=(10%*B{i})',
+           f'=(B{i}+C{i})', f'=(E{i-1}+C{i}*$J$2/12)',
+           f'=(F{i-1}+C{i}*$I$2/12)',
+           f'=(G{i-1}+C{i}*$H$2/12)', f'=(E{i}*12/$D{i})',
+           f'=(F{i}*12/$D{i})', f'=(G{i}*12/$D{i})']
 
     obj.mark(sheet_id, f'A{i}', [var])
 
