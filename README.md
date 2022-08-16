@@ -4,7 +4,7 @@
 
 # `f(x)` : [excel formula tutorial](https://www.ablebits.com/office-addins-blog/google-sheets-formula-basics/)
 
-> [![image](https://user-images.githubusercontent.com/50515418/184974202-bb39d497-c314-4c26-8b8b-77fe5fa836b9.png)](https://docs.google.com/spreadsheets/d/1tE4GtSjirvwpsrkREkCDKIK1Jhx1k2R7/edit?usp=sharing&ouid=117512306766539133793&rtpof=true&sd=true)
+> [![image](https://user-images.githubusercontent.com/50515418/184974202-bb39d497-c314-4c26-8b8b-77fe5fa836b9.png)](https://docs.google.com/spreadsheets/d/14XZFGM8UN8DDga7dH30t8ycYjHeGG-w9gDk_5hI8rns/edit?usp=sharing)
 
 -------------------------
 
