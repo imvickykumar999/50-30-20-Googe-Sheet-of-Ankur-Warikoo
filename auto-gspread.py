@@ -47,15 +47,29 @@ sheet_id = 0
 your_salary = 400000
 year = 2021
 
-head = ['Year', 'Starting Salary', 'Increment', 'Ending Salary', 'Needs', 'Wants', 'Investments', 'Needs %', 'Wants %', 'Investments %']
-body = [year, 0 , 0, your_salary, '=D2*H2/1200', '=I2*D2/1200', '=J2*D2/1200', 50, 30, 20]
+head = ['Year', 'Starting Salary',
+        'Increment', 'Ending Salary', 
+        'Needs', 'Wants', 'Investments', 
+        'Needs %', 'Wants %', 'Investments %']
+
+body = [year, 0 , 0, 
+        your_salary, '=D2*H2/1200',
+        '=I2*D2/1200', '=J2*D2/1200',
+        50, 30, 20]
+
 
 obj.mark(sheet_id, 'A1', [head])
 obj.mark(sheet_id, 'A2', [body])
 
 for i in range(3, 12):
-    var = [f'=A{i-1}+1', f'=D{i-1}', f'=10%*B{i}', f'=B{i}+C{i}', f'=E{i-1}+C{i}*$J{i-1}/12', '=F2+C3*$I2/12', '=G2+C3*$H2/12', '=E3*1200/$D3', '=F3*1200/$D3', '=G3*1200/$D3']
+    var = [f'=A{i-1}+1', f'=D{i-1}', f'=10%*B{i}',
+           f'=B{i}+C{i}', f'=E{i-1}+C{i}*$J${i-1}/12',
+           f'=F{i-1}+C{i}*$I${i-1}/12',
+           f'=G{i-1}+C{i}*$H${i-1}/12', f'=E{i}*12/$D{i}',
+           f'=F{i}*12/$D{i}', f'=G{i}*12/$D{i}']
+
     obj.mark(sheet_id, f'A{i}', [var])
+
 
 df = obj.fetch(sheet_id)
 print(df)
