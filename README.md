@@ -1,4 +1,4 @@
-# `50:30:20 Rule` of Budgeting on Googe Sheet of [Ankur Warikoo](https://www.youtube.com/watch?v=5uaXq-xDp2g)
+# `50:30:20 Rule` of [Budgeting](https://github.com/imvickykumar999/50-30-20-Googe-Sheet-of-Ankur-Warikoo/blob/08d3dc734eccfb4d84cabe1f3ce21c8d09cdfa55/auto-gspread.py#L67) on Google Sheet of [Ankur Warikoo](https://www.youtube.com/watch?v=5uaXq-xDp2g)
 
 ![image](https://user-images.githubusercontent.com/50515418/184974014-c10bfc59-160c-4178-acd2-4f288223eedd.png)
 
