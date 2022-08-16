@@ -103,7 +103,6 @@ class flask_sheet:
     def fetch(self, sheet_id):
         sheet_instance = self.sheet.get_worksheet_by_id(sheet_id)
         records_data = sheet_instance.get_all_records()
-        return records_data
 
         import pandas as pd
         df = pd.DataFrame(records_data) 
