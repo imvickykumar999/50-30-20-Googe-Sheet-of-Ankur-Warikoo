@@ -2,8 +2,8 @@
 class flask_sheet:
 
     def __init__(self, 
-            url = 'https://docs.google.com/spreadsheets/d/1aJqW6A_rVdK7bfeX2Lb8O22xztbDFZw29yLwSc3ekUE/edit#gid=0',
-            jfile = 'ideationology-lab-b60654e44e37.json',
+            url = 'https://docs.google.com/spreadsheets/d/14XZFGM8UN8DDga7dH30t8ycYjHeGG-w9gDk_5hI8rns/edit?usp=sharing',
+            jfile = 'cred.json',
         ):
 
         from oauth2client.service_account import ServiceAccountCredentials as sac
@@ -12,7 +12,7 @@ class flask_sheet:
         scope = ['https://spreadsheets.google.com/feeds',
                 'https://www.googleapis.com/auth/drive']
 
-        self.jfile = os.path.join('./account_tests', jfile)
+        self.jfile = os.path.join('./cred', jfile)
         creds = sac.from_json_keyfile_name(self.jfile, scope)
         client = gspread.authorize(creds)
 
@@ -105,33 +105,27 @@ class flask_sheet:
         records_data = sheet_instance.get_all_records()
         return records_data
 
-        # import pandas as pd
-        # df = pd.DataFrame(records_data) 
-        # df.index += 1
-        # return df
+        import pandas as pd
+        df = pd.DataFrame(records_data) 
+        df.index += 1
+        return df
 
 
 # ------------------------------------------
 
-# obj = flask_sheet()
-# print(obj)
+obj = flask_sheet()
+print(obj)
 
+cust = input('Enter Your Name : ') 
+sheet_id = obj.add_cust(cust) 
+print(sheet_id)
 
-# cust = input('Enter Your Name : ') 
-# sheet_id = obj.add_cust(cust) 
-# print(sheet_id)
-
-
-
-# saman = input('Enter Saman : ')
-# cost = float(input('Enter Cost : '))
-# attend = [saman, cost] 
+saman = input('Enter Saman : ')
+cost = float(input('Enter Cost : '))
+attend = [saman, cost] 
 
 # sheet_id = int(input('Enter sheet ID : '))
-# obj.mark(attend, sheet_id)
+obj.mark(attend, sheet_id)
 
-
-
-# sheet_id = int(input('Enter sheet ID : '))
-# df = obj.fetch(sheet_id)
-# print(df)
+df = obj.fetch(sheet_id)
+print(df)
