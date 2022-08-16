@@ -53,9 +53,9 @@ head = ['Year', 'Starting Salary',
         'Needs %', 'Wants %', 'Investments %']
 
 body = [year, 0 , 0, 
-        your_salary, '=D2*H2/1200',
-        '=I2*D2/1200', '=J2*D2/1200',
-        50, 30, 20]
+        your_salary, '=D2*H2/12',
+        '=I2*D2/12', '=J2*D2/12',
+        '=50%', '=30%', '=20%']
 
 
 obj.mark(sheet_id, 'A1', [head])
